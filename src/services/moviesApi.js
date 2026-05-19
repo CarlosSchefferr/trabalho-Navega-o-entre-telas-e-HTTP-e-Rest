@@ -1,5 +1,7 @@
+const MOVIES_API_URL = 'https://reactnative.dev/movies.json';
+
 export async function fetchMovies() {
-  const response = await fetch('https://reactnative.dev/movies.json');
+  const response = await fetch(MOVIES_API_URL);
   if (!response.ok) {
     throw new Error('Falha ao carregar os filmes');
   }
