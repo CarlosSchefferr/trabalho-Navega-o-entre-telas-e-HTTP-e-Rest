@@ -41,7 +41,7 @@ export default function MoviesScreen() {
     <View style={styles.container}>
       <FlatList
         data={movies}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => String(item.id)}
         contentContainerStyle={styles.list}
         renderItem={({ item }) => (
           <View style={styles.item}>
