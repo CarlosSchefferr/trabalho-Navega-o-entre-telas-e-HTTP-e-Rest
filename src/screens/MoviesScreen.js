@@ -13,7 +13,7 @@ export default function MoviesScreen() {
         const response = await fetchMovies();
         setMovies(response);
       } catch (requestError) {
-        setError('Não foi possível carregar os filmes.');
+        setError(requestError.message || 'Não foi possível carregar os filmes.');
       } finally {
         setLoading(false);
       }
